@@ -23,8 +23,8 @@ class Transfer
     @sender.balance = @sender.balance - @amount
     @receiver.balance = @receiver.balance + @amount 
     @status = "complete"
-    sender.balance = @sender.balance
-    receiver.balance = @receiver.balance
+    unless @justonce
+    @justonce = true
   end 
   
 end
