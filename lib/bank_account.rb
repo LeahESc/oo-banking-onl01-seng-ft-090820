@@ -14,6 +14,10 @@ class BankAccount
     # binding.pry 
    @balance = @balance + amount 
   end
+  
+  def display_balance
+    @balance
+  end
     
 
 end
