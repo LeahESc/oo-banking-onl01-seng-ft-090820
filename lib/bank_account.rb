@@ -11,7 +11,7 @@ class BankAccount
   end
   
   def deposit(amount)
-    binding.pry 
+    # binding.pry 
     @balance + amount 
   end
     
