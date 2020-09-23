@@ -25,8 +25,8 @@ class Transfer
       @status = "rejected"
       "Transaction rejected. Please check your account balance." 
       # binding.pry
-    elsif @status == "pending"
-      "Transaction is processing"
+    # elsif @status == "pending"
+      # "Transaction is processing"
     elsif  @status == "complete"
       "Transaction already completed." 
     else 
