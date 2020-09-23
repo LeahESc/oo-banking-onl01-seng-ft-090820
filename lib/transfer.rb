@@ -10,6 +10,7 @@ class Transfer
   end
   
   def valid? 
-    BankAccount.valid? 
+   BankAccount.valid? && BankAccount.valid? ? true : false 
+  end
 
 end
