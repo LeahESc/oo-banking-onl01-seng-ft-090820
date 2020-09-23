@@ -25,6 +25,7 @@ class Transfer
     @status = "complete"
     unless @justonce
     @justonce = true
+  end
   end 
   
 end
