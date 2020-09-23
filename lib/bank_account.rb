@@ -21,14 +21,9 @@ class BankAccount
   
   def valid? 
     # binding.pry
-     if status == "open" && balance > 0  
-       true 
-     else 
-       false
-    #   true 
-    # else 
-    #   @status = false
-     end
+    status == "open" && balance > 0  ? true : false
+  
+    # end
   end
     
 
