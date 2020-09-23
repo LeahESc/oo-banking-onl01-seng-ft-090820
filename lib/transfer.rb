@@ -23,12 +23,12 @@ class Transfer
     if @sender.balance < @amount
       "Transaction rejected. Please check your account balance."
       @status = "rejected"
-     else 
-    @sender.balance = @sender.balance - @amount
-    @receiver.balance = @receiver.balance + @amount 
-    @status = "complete"
-    define_singleton_method(:execute_transaction) {}
-  
+    else 
+      @sender.balance = @sender.balance - @amount
+      @receiver.balance = @receiver.balance + @amount 
+      @status = "complete"
+      define_singleton_method(:execute_transaction) {}
+    end
   end 
   
 end
