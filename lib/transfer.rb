@@ -21,10 +21,12 @@ class Transfer
   
   def execute_transaction 
     # binding.pry
-    if  !@sender.valid? || !@receiver.valid? 
+    if  !@sender.valid? || !@receiver.valid? || @sender.balance < @amount 
       @status = "rejected"
       "Transaction rejected. Please check your account balance." 
       # binding.pry
+    elsif @status == "pending"
+      "Transaction is processing"
     elsif  @status == "complete"
       "Transaction already completed." 
     else 
