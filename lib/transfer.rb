@@ -20,9 +20,9 @@ class Transfer
   end 
   
   def execute_transaction 
-    @sender.balance = @sender.balance - @amount
-    @receiver.balance = @receiver.balance + @amount 
+    @new_sender_balance = @sender.balance - @amount
+    @new_receiver_balance = @receiver.balance + @amount 
     @status = "complete"
   end 
-  memoize :execute_transaction
+  
 end
