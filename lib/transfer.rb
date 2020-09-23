@@ -1,3 +1,5 @@
+require 'pry'
+
 class Transfer
  
   attr_accessor :sender, :receiver, :status, :amount
@@ -10,6 +12,7 @@ class Transfer
   end
   
   def valid? 
+    binding.pry 
    BankAccount.valid? && BankAccount.valid? ? true : false 
   end
 
